@@ -1,8 +1,5 @@
 
-[![Build
-Status](https://travis-ci.org/data-steve/medium2jekyll.svg?branch=master)](https://travis-ci.org/data-steve/medium2jekyll)
-[![Coverage
-Status](https://coveralls.io/repos/data-steve/medium2jekyll/badge.svg?branch=master)](https://coveralls.io/r/data-steve/medium2jekyll?branch=master)
+
 
 
 ![](/inst/m2jekyll.png)
