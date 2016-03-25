@@ -48,7 +48,7 @@ The function goes through the following steps:
   
 
 
-### Use for New posts
+### Use for New Posts
 
 
 If you're like me, you wanted to transfer blog platforms because you not only have old content, but you also have new content. 
