@@ -1,0 +1,19 @@
+Package: medium2jekyll
+Title: Assists in Migrating from a Medium Blog to a Jekyll-based Blog, e.g.,
+    Github.io
+Version: 0.0.1
+Authors@R: c(person("Steve", "Simpson", email = "steven.troy.simpson@gmail.com", role = c("aut", "cre")))
+Maintainer: Steve Simpson <steven.troy.simpson@gmail.com>
+Description: medium2jekyll assists in migrating from a Medium blog to a jekyll-
+    based blog, notably one hosted on github.io. Specifically, it helps with text
+    scraping/formatting html to markdown, image downloading from posts, and markdown
+    cleaning for post content extraction.
+Depends:
+    R (>= 3.2.4)
+Suggests:
+    testthat
+Date: 2016-03-25
+License: GPL-2
+LazyData: TRUE
+Roxygen: list(wrap = FALSE)
+RoxygenNote: 5.0.1

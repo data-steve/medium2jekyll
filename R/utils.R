@@ -69,12 +69,12 @@ tag_handler <- function(h){
 # remove div tags around img, Jekyll will handle it
 img_div_drop <- function(h){
 
-#   # where img is
-#   b <- grep("!\\[\\]", h)
-#   #/div before
-#   h[(b-2)] <- ""
-#   #/div after
-#   h[(b+2)] <- ""
+  #   # where img is
+  #   b <- grep("!\\[\\]", h)
+  #   #/div before
+  #   h[(b-2)] <- ""
+  #   #/div after
+  #   h[(b+2)] <- ""
 
   d <- grep("<div class=\"aspectRatioPlaceholder ", h)
   for (i in d){
@@ -97,6 +97,13 @@ img_div_drop <- function(h){
   }
 
   h
+}
+
+# yml builder
+yml_handler <- function(title, titlecase=TRUE, tags=""){
+  c("---","layout: post"
+    , paste0("title: ", ifelse(titlecase, tools::toTitleCase(title), title))
+    , "tags: [ ]", "---")
 }
 
 # download images and re-write markdown code for it
@@ -127,36 +134,4 @@ image_handler <- function(h){
     }
   }
   h
-}
-
-# create a new post -- either in _posts folder for live or _backlog for later
-new_post <- function(title, titlecase=TRUE, date = NA){
-  # check wkdir
-  if(!grepl("github.",getwd())) stop("You need to change wkdir to github.io folder")
-  # set backlog date
-  if (is.na(date)){
-    dts <- as.character(Sys.Date())
-
-    subfolder <- "./_posts/"
-  } else {
-  dts <- paste0(date)
-  subfolder <- "./_backlog/"
-  }
-
-  yml <- c("---","layout: post"
-           , paste0("title: ", ifelse(titlecase, tools::toTitleCase(title), title))
-           , "tags: []", "---")
-  file_name <- paste0(paste0(c(dts,
-                         gsub(" ", "-",
-                              gsub("\\s+"," ",
-                                   gsub("-"," ",  # handle hypthens in the title
-                                                              tolower(trimws(title)))
-                                         ))
-                               ), collapse="-")
-                      ,".md")
-
-  writeLines(yml,
-             con= file.path(paste0(subfolder,file_name)))
-
-  file.edit(file.path(paste0(subfolder,file_name)))
 }

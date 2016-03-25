@@ -1,0 +1,40 @@
+---
+title: "medium2jekyll"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  md_document:
+    toc: true      
+---
+
+```{r, echo=FALSE}
+desc <- suppressWarnings(readLines("DESCRIPTION"))
+regex <- "(^Version:\\s+)(\\d+\\.\\d+\\.\\d+)"
+loc <- grep(regex, desc)
+ver <- gsub(regex, "\\2", desc[loc])
+verbadge <- sprintf('<a href="https://img.shields.io/badge/Version-%s-orange.svg"><img src="https://img.shields.io/badge/Version-%s-orange.svg" alt="Version"/></a></p>', ver, ver)
+````
+
+[![Build Status](https://travis-ci.org/data-steve/medium2jekyll.svg?branch=master)](https://travis-ci.org/data-steve/medium2jekyll)
+[![Coverage Status](https://coveralls.io/repos/data-steve/medium2jekyll/badge.svg?branch=master)](https://coveralls.io/r/data-steve/medium2jekyll?branch=master)
+
+`r verbadge`
+
+**medium2jekyll** is...
+
+# Installation
+
+To download the development version of **medium2jekyll**:
+
+Download the [zip ball](https://github.com/data-steve/medium2jekyll/zipball/master) or [tar ball](https://github.com/data-steve/medium2jekyll/tarball/master), decompress and run `R CMD INSTALL` on it, or use the **pacman** package to install the development version:
+
+```r
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load_gh("data-steve/medium2jekyll")
+```
+
+# Contact
+
+You are welcome to:
+* submit suggestions and bug-reports at: <https://github.com/data-steve/medium2jekyll/issues>
+* send a pull request on: <https://github.com/data-steve/medium2jekyll/>
+* compose a friendly e-mail to: <steven.troy.simpson@gmail.com>
