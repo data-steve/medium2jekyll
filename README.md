@@ -12,8 +12,9 @@ Status](https://coveralls.io/repos/data-steve/medium2jekyll/badge.svg?branch=mas
 - image downloading from posts
 - markdown cleaning for post content extraction
 
-Installation
-============
+
+### Installation
+
 
 To port your own Medium blog, start by downloading the github package from here:
 
@@ -21,8 +22,8 @@ To port your own Medium blog, start by downloading the github package from here:
 
 
 
-Use for Transfer
-================
+### Use for Transfer
+
 
 Then all you need to start the process is your Medium handle from the url of your Medium blog.
 For example, if url to your Medium page is `www.medium.com/@fun_times`, then `@fun_times`
@@ -37,7 +38,7 @@ Simply plop your Medium handle in the main medium2jekyll function like so:
 The function goes through the following steps:
 
   1. Creates a project folder ('blog_transfer') on your Desktop, with 2 subfolders: _posts and images. Both standard subfolders on Jekyll blog. 
-  2. Facilitates an initial scrape of the medium.com/@fun_times/latest page, which is a concise listing of all posts for that account on a page that doesn't the content buried with in impenetrable layers of <div> tags.
+  2. Facilitates an initial scrape of the medium.com/@fun_times/latest page, which is a concise listing of all posts for that account on a page that doesn't the content buried with in impenetrable layers of div tags.
   
   3. Then with those post links, the main function loops over each page and turns it into a cleaned markdown file, which respects highlighted code-chunks and embedded images / links. 
   
@@ -47,8 +48,8 @@ The function goes through the following steps:
   
 
 
-Use for New posts
-==================
+### Use for New posts
+
 
 If you're like me, you wanted to transfer blog platforms because you not only have old content, but you also have new content. 
 medium2jekyll comes with one helper function for this:
