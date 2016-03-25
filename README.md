@@ -4,8 +4,11 @@ Status](https://travis-ci.org/data-steve/medium2jekyll.svg?branch=master)](https
 [![Coverage
 Status](https://coveralls.io/repos/data-steve/medium2jekyll/badge.svg?branch=master)](https://coveralls.io/r/data-steve/medium2jekyll?branch=master)
 
-<a href="https://img.shields.io/badge/Version-0.0.1-orange.svg"><img src="https://img.shields.io/badge/Version-0.0.1-orange.svg" alt="Version"/></a>
-</p>
+
+![](/inst/m2jekyll.png)
+
+
+
 
 **medium2jekyll** assists  in migrating from a Medium blog to a jekyll-based blog, notably one hosted on github.io. Specifically, it helps with 
 - text scraping/formatting html to markdown
