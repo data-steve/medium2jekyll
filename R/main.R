@@ -141,8 +141,7 @@ new_post <- function(title, subfolder = "./_posts/", date = as.character(Sys.Dat
 
   # front matter
   yml <-  c("---","layout: post"
-            , paste0("title: ", tools::toTitleCase(title)
-            , "tags: [ ]", "---")
+            , paste0("title: ", tools::toTitleCase(title) , "tags: [ ]", "---"))
 
   # build file name to work with Jekyll format
   file_name <- paste0(paste0(c(date,   # set date always 1 day into future
