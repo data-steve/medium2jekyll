@@ -4,14 +4,14 @@
 \alias{new_post}
 \title{Creates a New Post in Jekyll-based Markdown}
 \usage{
-new_post(title, titlecase = TRUE, date = as.character(Sys.Date() + 1))
+new_post(title, subfolder = "./_posts/", date = as.character(Sys.Date()))
 }
 \arguments{
 \item{title}{Title of new post}
 
-\item{titlecase}{Whether title should be in titlecase}
+\item{subfolder}{where file is saved}
 
-\item{date}{Date, default is Sys.Date + 1}
+\item{date}{Date, default is Sys.Date}
 }
 \description{
 Creates a New Post in Jekyll-based Markdown

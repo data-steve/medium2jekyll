@@ -1,7 +1,7 @@
 Package: medium2jekyll
 Title: Assists in Migrating from a Medium Blog to a Jekyll-based Blog, e.g.,
     Github.io
-Version: 0.0.1
+Version: 0.1.1
 Authors@R: c(person("Steve", "Simpson", email = "steven.troy.simpson@gmail.com", role = c("aut", "cre")))
 Maintainer: Steve Simpson <steven.troy.simpson@gmail.com>
 Description: medium2jekyll assists in migrating from a Medium blog to a jekyll-
@@ -12,7 +12,7 @@ Depends:
     R (>= 3.2.4)
 Suggests:
     testthat
-Date: 2016-03-25
+Date: 2016-08-06
 License: GPL-2
 LazyData: TRUE
 Roxygen: list(wrap = FALSE)

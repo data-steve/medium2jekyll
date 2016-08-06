@@ -6,7 +6,6 @@
 
 
 
-
 **medium2jekyll** assists  in migrating from a Medium blog to a jekyll-based blog, notably one hosted on github.io. Specifically, it helps with 
 - text scraping/formatting html to markdown
 - image downloading from posts
@@ -15,7 +14,6 @@
 
 ### Installation
 
-
 To port your own Medium blog, start by downloading the github package from here:
 
     devtools::install_github("data-steve/medium2jekyll")
@@ -23,7 +21,6 @@ To port your own Medium blog, start by downloading the github package from here:
 
 
 ### Use for Transfer
-
 
 Then all you need to start the process is your Medium handle from the url of your Medium blog.
 For example, if url to your Medium page is `www.medium.com/@fun_times`, then `@fun_times`
@@ -39,17 +36,13 @@ The function goes through the following steps:
 
   1. Creates a project folder ('blog_transfer') on your Desktop, with 2 subfolders: _posts and images. Both standard subfolders on Jekyll blog. 
   2. Facilitates an initial scrape of the medium.com/@fun_times/latest page, which is a concise listing of all posts for that account on a page that doesn't the content buried with in impenetrable layers of div tags.
-  
   3. Then with those post links, the main function loops over each page and turns it into a cleaned markdown file, which respects highlighted code-chunks and embedded images / links. 
-  
   4. Each posts markdown file is ends up in the /_posts subfolder, and any associated images are downloaded in the /images subfolder. 
-  
   5. The markdown file is cleaned up and rebuilt so that all the links and boilerplate should render on a Jekyll platform.
   
 
 
 ### Use for New Posts
-
 
 If you're like me, you wanted to transfer blog platforms because you not only have old content, but you also have new content. 
 **medium2jekyll** comes with one helper function for this:
@@ -60,5 +53,3 @@ If you're like me, you wanted to transfer blog platforms because you not only ha
 
 
 There are other aspects of the **medium2jekyll** package which are generically useful for converting html files to markdown that I may explore further at my new blog: [data-steve.github.io](data-steve.github.io). 
-
-

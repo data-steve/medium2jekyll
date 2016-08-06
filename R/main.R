@@ -125,20 +125,19 @@ medium2jekyll <- function(url, where_to = "~/Desktop/blog_transfer"){
 #' Creates a New Post in Jekyll-based Markdown
 #'
 #' @param title       Title of new post
-#' @param titlecase   Whether title should be in titlecase
-#' @param date        Date, default is Sys.Date + 1
+#' @param subfolder   where file is saved
+#' @param date        Date, default is Sys.Date
 #' @export
 #' @examples
 #' \dontrun{
 #' new_post("the end of the year", date = "2016-12-31")
 #' }
-new_post <- function(title, titlecase=TRUE, date = as.character(Sys.Date()+1)){
+new_post <- function(title, subfolder = "./_posts/", date = as.character(Sys.Date())){
   # check wkdir
   if(!grepl("github.",getwd())) stop("You need to change wkdir to github.io folder")
 
   # this requires the safety that I separately move files
   # from _backlog into _posts
-  subfolder <- "./_backlog/"
 
   # front matter
   yml <-  c("---","layout: post"
